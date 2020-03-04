@@ -4,7 +4,7 @@ import parse from './lib/parse.jsx';
 import styles from './lib/styles.jsx';
 
 const style = {
-  padding: '0 8px',
+  padding: '0 130px',
   display: 'grid',
   gridAutoFlow: 'column',
   gridGap: '16px',
