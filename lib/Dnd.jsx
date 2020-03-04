@@ -1,4 +1,4 @@
-import styles from "./styles.jsx";
+import styles from "./styles.jsx.js.js";
 
 const style = {
   color: styles.colors.red

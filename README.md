@@ -1,23 +1,23 @@
-# nibbar
+# yabar
 
 A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht).
 
 ## Screenshot
 
-![img](./ss.png)
+![img](./img/screenshot.png)
 
 ## Installation
 
 Clone this repo to your Übersicht widgets directory.
 
 ```bash
-$ git clone https://github.com/AlexNaga/yabai-status-bar $HOME/Library/Application\ Support/Übersicht/widgets/nibbar
+$ git clone https://github.com/AlexNaga/yabar $HOME/Library/Application\ Support/Übersicht/widgets/nibbar
 ```
 
 ## Dependencies
 
 - [jq](https://github.com/stedolan/jq) — used for parsing json output and displaying the workspaces widget
-    - install with homebrew: `brew install jq`
+  - install with homebrew: `brew install jq`
 - [SF Fonts](https://developer.apple.com/fonts/) (optional) — used for symbols in the statusbar widget
 
 ## Usage
@@ -35,21 +35,19 @@ The widgets for displaying yabai workspaces aren't refreshing automatically (to 
 
 ```sh
 yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-spaces-primary-jsx\"'"
 ```
 
 #### When using dual displays
 
 ```sh
 yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-spaces-primary-jsx\"'"
 yabai -m signal --add event=display_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-primary-jsx\"'"
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-spaces-primary-jsx\"'"
 
 yabai -m signal --add event=space_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-secondary-jsx\"'"
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-spaces-secondary-jsx\"'"
 yabai -m signal --add event=display_changed \
-    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"nibar-spaces-secondary-jsx\"'"
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-spaces-secondary-jsx\"'"
 ```
-
-

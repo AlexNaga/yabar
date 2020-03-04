@@ -1,4 +1,4 @@
-import styles from "./styles.jsx";
+import styles from "./styles.jsx.js.js";
 
 const render = ({ output }) => {
   if (typeof output === "undefined") return null;
