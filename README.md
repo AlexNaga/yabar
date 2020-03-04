@@ -19,7 +19,7 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 Clone this repo to your Übersicht widgets directory.
 
 ```bash
-$ git clone https://github.com/AlexNaga/yabar $HOME/Library/Application\ Support/Übersicht/widgets/nibbar
+$ git clone https://github.com/AlexNaga/yabar $HOME/Library/Application\ Support/Übersicht/widgets/yabar
 ```
 
 ## Dependencies
