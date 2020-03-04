@@ -19,8 +19,8 @@ const style = {
   fontWeight: styles.fontWeight
 };
 
-export const refreshFrequency = false;
-export const command = './nibar/scripts/spaces_secondary.sh';
+export const refreshFrequencyInMs = false;
+export const command = './yabar/scripts/spaces_secondary.sh';
 
 export const render = ({ output }) => {
   const data = parse(output);

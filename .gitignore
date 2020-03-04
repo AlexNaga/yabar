@@ -62,3 +62,8 @@ typings/
 
 # OS Files
 .DS_Store
+
+# Misc
+cur_track.id
+cur_track.json
+token.sec

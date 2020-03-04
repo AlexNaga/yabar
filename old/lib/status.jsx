@@ -23,9 +23,9 @@ const style = {
   fontWeight: styles.fontWeight
 };
 
-export const refreshFrequency = 10000;
+export const refreshFrequencyInMs = 10000;
 
-export const command = './nibar/scripts/status.sh';
+export const command = './yabar/scripts/status.sh';
 
 export const render = ({ output }) => {
   const data = parse(output);

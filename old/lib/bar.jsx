@@ -14,7 +14,7 @@ const style = {
   left: '0px'
 };
 
-export const refreshFrequency = 1000000;
+export const refreshFrequencyInMs = 1000000;
 
 export const render = ({ output }) => {
   return <div style={style} />;
