@@ -1,8 +1,8 @@
-import styles from "./styles.jsx.js.js";
+import styles from './styles.jsx';
 
 const style = {
   color: styles.colors.red
-}
+};
 
 const render = ({ output }) => {
   if (output === 0) return null;

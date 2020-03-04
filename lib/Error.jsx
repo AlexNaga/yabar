@@ -1,11 +1,11 @@
-import styles from "./styles.jsx.js.js"
+import styles from './styles.jsx';
 
 const style = {
   color: styles.colors.red
 };
 
 const render = ({ msg, side }) => {
-  if (typeof msg === "undefined") return null;
+  if (typeof msg === 'undefined') return null;
   return <div style={style}>{msg}</div>;
 };
 

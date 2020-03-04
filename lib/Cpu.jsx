@@ -1,7 +1,7 @@
-import styles from "./styles.jsx.js.js";
+import styles from './styles.jsx';
 
 const render = ({ output }) => {
-  if (typeof output === "undefined") return null;
+  if (typeof output === 'undefined') return null;
   return (
     <div style={output.loadAverage > 3 ? { color: styles.colors.red } : null}>
       <span>􀍽 {output.loadAverage}</span>

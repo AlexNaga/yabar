@@ -1,11 +1,11 @@
-import DateTime from './lib/DateTime.jsx.js.js';
-import Battery from './lib/Battery.jsx.js.js';
-import Cpu from './lib/Cpu.jsx.js.js';
-import Wifi from './lib/Wifi.jsx.js.js';
-import Dnd from './lib/Dnd.jsx.js.js';
-import Error from './lib/Error.jsx.js.js';
-import parse from './lib/parse.jsx.js.js';
-import styles from './lib/styles.jsx.js.js';
+import DateTime from './lib/DateTime.jsx';
+import Battery from './lib/Battery.jsx';
+import Cpu from './lib/Cpu.jsx';
+import Wifi from './lib/Wifi.jsx';
+import Dnd from './lib/Dnd.jsx';
+import Error from './lib/Error.jsx';
+import parse from './lib/parse.jsx';
+import styles from './lib/styles.jsx';
 
 const style = {
   display: 'grid',
