@@ -1,7 +1,7 @@
 import { defaultTheme } from './lib/style';
 
 const command = 'bash yabar/lib/spotify/get_track_metadata.sh';
-const refreshFrequencyInMs = 5000;
+const refreshFrequency = 5000;
 
 const renderClass = `
   ${defaultTheme}
@@ -24,4 +24,4 @@ const render = ({ output }) => {
   return <div>{`${spotify}`}</div>;
 };
 
-export { command, refreshFrequencyInMs, renderClass as className, render };
+export { command, refreshFrequency, renderClass as className, render };

@@ -1,7 +1,7 @@
 import { defaultTheme } from './lib/style';
 
 const command = 'bash yabar/lib/network.sh';
-const refreshFrequencyInMs = 5000;
+const refreshFrequency = 5000; // ms
 
 const renderClass = `
   ${defaultTheme}
@@ -12,4 +12,4 @@ const renderClass = `
 
 const render = ({ output }) => <div>{`${output}`}</div>;
 
-export { command, refreshFrequencyInMs, renderClass as className, render };
+export { command, refreshFrequency, renderClass as className, render };

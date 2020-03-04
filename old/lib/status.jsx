@@ -23,7 +23,7 @@ const style = {
   fontWeight: styles.fontWeight
 };
 
-export const refreshFrequencyInMs = 10000;
+export const refreshFrequency = 10000;
 
 export const command = './yabar/scripts/status.sh';
 

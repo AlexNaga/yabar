@@ -19,7 +19,7 @@ const style = {
   fontWeight: styles.fontWeight
 };
 
-export const refreshFrequencyInMs = false;
+export const refreshFrequency = false;
 export const command = './yabar/scripts/spaces_primary.sh';
 
 export const render = ({ output }) => {

@@ -1,7 +1,7 @@
 import { defaultTheme } from './lib/style';
 
 const command = 'date +"%a, %d %b %y"';
-const refreshFrequencyInMs = 100000;
+const refreshFrequency = 100000; // ms
 
 const renderClass = `
   ${defaultTheme}
@@ -15,4 +15,4 @@ const renderClass = `
 
 const render = ({ output }) => <div>{`${output}`}</div>;
 
-export { command, refreshFrequencyInMs, renderClass as className, render };
+export { command, refreshFrequency, renderClass as className, render };
