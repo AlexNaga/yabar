@@ -38,7 +38,7 @@ You can get one from
 by clicking **Get Token**. _THIS TOKEN WILL BE EXPIRED QUICK_
 
 ```sh
-echo -n "TOKEN_HERE" > "${HOME}/Library/Application Support/Übersicht/widgets/yabar/lib/spotify/token.sec"
+echo -n "BQBKZjAAYsznDX5qEOab25GVTkLX9RjO6FWP6JrsWtlZ29yUoPEzQE6Ls2tJFGUSIcLZVA70n3pKYdlrUz3HPK7H2kHoEIOo9827dN3J9_4CqfzVERVr1znPnghizkMQxh4MrtWN" > "${HOME}/Library/Application Support/Übersicht/widgets/yabar/lib/spotify/token.sec"
 ```
 
 ## Usage
