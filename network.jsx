@@ -1,13 +1,13 @@
-import { defaultTheme } from "./lib/style";
+import { defaultTheme } from './lib/style';
 
-const command = "bash yabar/lib/network.sh";
+const command = 'bash yabar/lib/getWifiName.sh';
 const refreshFrequency = 5000; // ms
 
 const renderClass = `
   ${defaultTheme}
   right: auto;
   bottom: auto;
-  margin-left: 300px;
+  margin-left: 72%;
 `;
 
 const render = ({ output }) => <div>{`${output}`}</div>;
