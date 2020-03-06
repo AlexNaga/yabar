@@ -1,6 +1,6 @@
-import { defaultTheme } from "./lib/style";
+import { defaultTheme } from './lib/style';
 
-const command = "/usr/local/bin/yabai -m query --spaces";
+const command = '/usr/local/bin/yabai -m query --spaces';
 const refreshFrequency = false;
 
 const renderClass = `
@@ -21,7 +21,7 @@ const renderClass = `
     margin: 0;
   }
 
-  ul:not(:first-child) {
+  ul:not(:first-of-type) {
     margin-left: 20px;
     padding-left: 8px;
     border-left: 1px solid #D8DEE9;
@@ -37,26 +37,39 @@ const renderClass = `
   }
 `;
 
-const spaces = JSON.parse(output);
-
-const numDisplays = [...new Set(spaces.map(item => item.display))];
-
-const displaySpaces = numDisplays.map(display => {
-  return spaces.filter(item => {
-    if (item.display === display) return item;
+const getSpaces = (spaces, displayCount) => {
+  return displayCount.map(display => {
+    return spaces.filter(item => {
+      if (item.display === display) return item;
+    });
   });
-});
+};
 
-const displayList = displaySpaces.map((displaySpace, i) => {
-  return (
-    <ul key={i} className="space-container">
-      {displaySpace.map((space, i) => {
-        return <li className={space.focused ? "active" : ""}>{space.index}</li>;
-      })}
-    </ul>
-  );
-});
+const generateSpaceList = spaces => {
+  return spaces.map((displaySpace, i) => {
+    return (
+      <ul key={i} className="space-container">
+        {displaySpace.map((space, i) => {
+          return (
+            <li key={i} className={space.focused ? 'active' : ''}>
+              {space.index}
+            </li>
+          );
+        })}
+      </ul>
+    );
+  });
+};
 
-const render = () => <div className="display-container">{displayList}</div>;
+const render = ({ output }) => {
+  if (!output) return;
+
+  const spacesMetadata = JSON.parse(output);
+  const displayCount = [...new Set(spacesMetadata.map(item => item.display))];
+  const spaces = getSpaces(spacesMetadata, displayCount);
+  const spaceList = generateSpaceList(spaces);
+
+  return <div className="display-container">{spaceList}</div>;
+};
 
 export { command, refreshFrequency, renderClass as className, render };
