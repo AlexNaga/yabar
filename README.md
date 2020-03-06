@@ -27,7 +27,6 @@ $ git clone git@github.com:AlexNaga/yabar.git $HOME/Library/Application\ Support
 - [jq](https://github.com/stedolan/jq) — used for parsing json output and displaying the workspaces widget
   - install with homebrew: `brew install jq`
 - [SF Mono Fonts](https://developer.apple.com/fonts/) (optional) — used for symbols in the statusbar widget
-- [ifstat](http://macappstore.org/ifstat/) — used for Übersicht widget
 
 # Setup
 
