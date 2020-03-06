@@ -16,10 +16,10 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 
 ## Installation
 
-Clone this repo to your Übersicht widgets directory
+Clone this repo to your Übersicht widgets directory.
 
 ```bash
-$ git clone https://github.com/AlexNaga/yabar $HOME/Library/Application\ Support/Übersicht/widgets/yabar
+$ git clone git@github.com:AlexNaga/yabar.git $HOME/Library/Application\ Support/Übersicht/widgets/yabar
 ```
 
 ## Dependencies
