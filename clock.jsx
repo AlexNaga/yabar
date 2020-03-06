@@ -5,9 +5,13 @@ const refreshFrequency = 60000; // ms
 
 const renderClass = `
   ${defaultTheme}
-  left: auto;
-  bottom: auto;
   font-weight: bold;
+  width: auto;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%);
 `;
 
 const render = ({ output }) => <div>{`${output}`}</div>;
