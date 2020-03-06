@@ -37,30 +37,26 @@ const renderClass = `
   }
 `;
 
-const render = ({ output }) => {
-  const spaces = JSON.parse(output);
+const spaces = JSON.parse(output);
 
-  const numDisplays = [...new Set(spaces.map(item => item.display))];
+const numDisplays = [...new Set(spaces.map(item => item.display))];
 
-  const displaySpaces = numDisplays.map(display => {
-    return spaces.filter(item => {
-      if (item.display === display) return item;
-    });
+const displaySpaces = numDisplays.map(display => {
+  return spaces.filter(item => {
+    if (item.display === display) return item;
   });
+});
 
-  const displayList = displaySpaces.map((displaySpace, i) => {
-    return (
-      <ul key={i} className="space-container">
-        {displaySpace.map((space, i) => {
-          return (
-            <li className={space.focused ? "active" : ""}>{space.index}</li>
-          );
-        })}
-      </ul>
-    );
-  });
+const displayList = displaySpaces.map((displaySpace, i) => {
+  return (
+    <ul key={i} className="space-container">
+      {displaySpace.map((space, i) => {
+        return <li className={space.focused ? "active" : ""}>{space.index}</li>;
+      })}
+    </ul>
+  );
+});
 
-  return <div className="display-container">{displayList}</div>;
-};
+const render = () => <div className="display-container">{displayList}</div>;
 
 export { command, refreshFrequency, renderClass as className, render };
