@@ -1,6 +1,6 @@
 import { defaultTheme } from './lib/style';
 
-const command = 'bash yabar/lib/spotify/get_track_metadata.sh';
+const command = 'bash yabar/lib/scripts/get_spotify_track.sh';
 const refreshFrequency = 5000;
 
 const renderClass = `
