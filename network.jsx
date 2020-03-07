@@ -1,6 +1,6 @@
 import { defaultTheme } from './lib/style';
 
-const command = 'bash yabar/lib/getWifiName.sh';
+const command = 'bash yabar/lib/scripts/get_wifi_name.sh';
 const refreshFrequency = 5000; // ms
 
 const renderClass = `
