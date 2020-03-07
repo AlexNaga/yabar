@@ -1,6 +1,8 @@
+import { run } from 'uebersicht';
 import { defaultTheme } from './lib/style';
 
-const command = '/usr/local/bin/yabai -m query --spaces';
+const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
+
 const refreshFrequency = false;
 
 const renderClass = `
@@ -37,19 +39,11 @@ const renderClass = `
   }
 `;
 
-const getSpaces = (spaces, displayCount) => {
-  return displayCount.map(display => {
-    return spaces.filter(item => {
-      if (item.display === display) return item;
-    });
-  });
-};
-
-const generateSpaceList = spaces => {
-  return spaces.map((displaySpace, i) => {
+const generateSpaceList = (displays, spaces) => {
+  return displays.map((display, i) => {
     return (
       <ul key={i} className="space-container">
-        {displaySpace.map((space, i) => {
+        {spaces.map((space, i) => {
           return (
             <li key={i} className={space.focused ? 'active' : ''}>
               {space.index}
@@ -64,10 +58,10 @@ const generateSpaceList = spaces => {
 const render = ({ output }) => {
   if (!output) return;
 
-  const spacesMetadata = JSON.parse(output);
-  const displayCount = [...new Set(spacesMetadata.map(item => item.display))];
-  const spaces = getSpaces(spacesMetadata, displayCount);
-  const spaceList = generateSpaceList(spaces);
+  const data = JSON.parse(output);
+  const displays = data.displays;
+  const spaces = data.spaces;
+  const spaceList = generateSpaceList(displays, spaces);
 
   return <div className="display-container">{spaceList}</div>;
 };
