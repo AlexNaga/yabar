@@ -1,4 +1,3 @@
-import { run } from 'uebersicht';
 import { defaultTheme } from './lib/style';
 
 const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
