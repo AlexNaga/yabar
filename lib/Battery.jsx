@@ -9,7 +9,7 @@ const render = ({ output }) => {
     <div>
       <div style={percentage < 10 && charging == false ? { color: styles.colors.red } : null}>
         <span>
-          {charging ? '􀋦' : null} {percentage}%
+          {charging ? <i class="fas fa-bolt"></i> : null} {percentage}%
         </span>
       </div>
     </div>
