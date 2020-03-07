@@ -10,6 +10,11 @@ const renderClass = `
   margin-left: 72%;
 `;
 
-const render = ({ output }) => <div>{`${output}`}</div>;
+const render = ({ output }) => (
+  <div>
+    <i className="fas fa-wifi" />
+    {`${output}`}
+  </div>
+);
 
 export { command, refreshFrequency, renderClass as className, render };
