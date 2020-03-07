@@ -1,6 +1,6 @@
 import { defaultTheme } from './lib/style';
 
-const command = 'bash yabar/lib/scripts/get_spotify_track.sh';
+const command = 'bash yabar/lib/scripts/spotify/get_track.sh';
 const refreshFrequency = 5000;
 
 const renderClass = `
@@ -12,16 +12,18 @@ const renderClass = `
 `;
 
 const render = ({ output }) => {
-  if (!output) return null;
+  if (!output) return;
 
-  const { name, artists } = JSON.parse(output);
-  if (!name || !artists) return null;
+  const { artist, name } = JSON.parse(output);
 
-  const artistsName = artists.map(artist => artist.name).join(' X ');
-  let spotify = `${artistsName} - ${name}`;
-  if (spotify.length > 34) spotify = `${spotify.slice(0, 30)} ...`;
+  let songStr = `${artist} - ${name}`;
+  const tooLongStr = songStr.length > 34;
 
-  return <div>{`${spotify}`}</div>;
+  if (tooLongStr) {
+    songStr = `${songStr.slice(0, 30)} ...`;
+  }
+
+  return <div>{`${songStr}`}</div>;
 };
 
 export { command, refreshFrequency, renderClass as className, render };
