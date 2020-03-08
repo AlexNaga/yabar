@@ -1,4 +1,5 @@
 import { defaultTheme } from './lib/style';
+import styles from './lib/styles.jsx';
 
 const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
 
@@ -33,10 +34,23 @@ const renderClass = `
     margin: 0 5px;
   }
 
-  li.active {
-    border: 2px solid #D8DEE9;
+  li.visible {
+    border: 2px solid ${styles.colors.dim};
+  }
+
+  li.focused {
+    border: 2px solid ${styles.colors.lightgray};
   }
 `;
+
+const getClassName = space => {
+  let className = '';
+
+  if (space.visible) className += ' visible';
+  if (space.focused) className += ' focused';
+
+  return className;
+};
 
 const generateSpaceList = (displays, spaces) => {
   return displays.map((display, i) => {
@@ -44,7 +58,7 @@ const generateSpaceList = (displays, spaces) => {
       <ul key={i} className="space-container">
         {spaces.map((space, i) => {
           return (
-            <li key={i} className={space.focused ? 'active' : ''}>
+            <li key={i} className={getClassName(space)}>
               {space.index}
             </li>
           );
@@ -59,6 +73,8 @@ const render = ({ output }) => {
 
   const { displays, spaces } = JSON.parse(output);
   const spaceList = generateSpaceList(displays, spaces);
+
+  console.log({ displays, spaces });
 
   return <div className="display-container">{spaceList}</div>;
 };

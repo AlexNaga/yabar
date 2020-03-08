@@ -9,8 +9,8 @@ const renderClass = `
     display: flex;
     padding: 0 22px;
     position: fixed;
+    top: 8px;
     right: 0px;
-    top: 0px;
     color: ${styles.colors.dim};
     font-family: ${styles.fontFamily};
     font-size: ${styles.fontSize};
