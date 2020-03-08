@@ -6,10 +6,14 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 
 - Show active workspace number _(with multi-display support)_
 - Battery indicator
+- WiFi strength indicator
 - Connected WiFi name
 - System load
-- Volume
 - Date and time
+
+### TODO
+
+- Volume
 
 ## Screenshot
 
