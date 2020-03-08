@@ -4,7 +4,7 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 
 ## Features
 
-- Show active workspace number _(with multi-display support)
+- Show active workspace number _(with multi-display support)_
 - Battery indicator
 - Connected WiFi name
 - System load
