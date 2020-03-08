@@ -19,7 +19,7 @@ LOAD_AVERAGE=$(sysctl -n vm.loadavg | awk '{print $2}')
 
 WIFI_STATUS=$(ifconfig en0 | grep status | cut -c 10-)
 WIFI_NAME=$(networksetup -getairportnetwork en0 | cut -c 24-)
-WIFI_PERCENTAGE=$(/System/Library/PrivateFrameworks/Apple*.framework/Versions/Current/Resources/airport -I | grep CtlRSSI | sed -e 's/^.*://g' | xargs -I SIGNAL)
+WIFI_PERCENTAGE=$(/System/Library/PrivateFrameworks/Apple*.framework/Versions/Current/Resources/airport -I | grep -E 'agrCtlRSSI|agrCtlNoise' | awk '{print $2}' | sed 'N;s/\n/ - /g' | bc)
 
 echo $(cat <<-EOF
 {
