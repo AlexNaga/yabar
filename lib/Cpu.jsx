@@ -6,15 +6,10 @@ const render = ({ output }) => {
   const cpuLimit = 3;
   const isHighLoad = output.loadAverage > cpuLimit;
 
-  const isWarning = isHighLoad ? { color: styles.colors.red } : null;
-  const style = {
-    ...isWarning,
-    display: 'flex',
-    alignItems: 'center'
-  };
+  const hasWarning = isHighLoad ? { color: styles.colors.red } : null;
 
   return (
-    <div style={style}>
+    <div style={hasWarning}>
       <i className="gg-performance" />
       {output.loadAverage}
     </div>

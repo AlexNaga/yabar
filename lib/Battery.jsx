@@ -23,15 +23,10 @@ const render = ({ output }) => {
     icon = lowBatteryIcon;
   }
 
-  const isWarning = isLowBattery ? { color: styles.colors.red } : null;
-  const renderClass = {
-    ...isWarning,
-    display: 'flex',
-    alignItems: 'center'
-  };
+  const hasWarning = isLowBattery ? { color: styles.colors.red } : null;
 
   return (
-    <div style={renderClass}>
+    <div style={hasWarning}>
       {icon}
       {percentage}%
     </div>

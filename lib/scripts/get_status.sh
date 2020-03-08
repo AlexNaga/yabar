@@ -18,29 +18,24 @@ fi
 LOAD_AVERAGE=$(sysctl -n vm.loadavg | awk '{print $2}')
 
 WIFI_STATUS=$(ifconfig en0 | grep status | cut -c 10-)
-WIFI_SSID=$(networksetup -getairportnetwork en0 | cut -c 24-)
-
-DND=$(defaults -currentHost read com.apple.notificationcenterui doNotDisturb)
+WIFI_NAME=$(networksetup -getairportnetwork en0 | cut -c 24-)
 
 echo $(cat <<-EOF
 {
-    "datetime": {
-        "time": "|  $TIME",
-        "date": "|  $DATE"
-    },
+    "date": "$DATE",
+    "time": "$TIME",
     "battery": {
-        "percentage": $BATTERY_PERCENTAGE,
-        "charging": $BATTERY_CHARGING,
+        "percentage": "$BATTERY_PERCENTAGE",
+        "charging": "$BATTERY_CHARGING",
         "remaining": "$BATTERY_REMAINING"
     },
     "cpu": {
-        "loadAverage": $LOAD_AVERAGE
+        "loadAverage": "$LOAD_AVERAGE"
     },
     "wifi": {
         "status": "$WIFI_STATUS",
-        "ssid": "$WIFI_SSID"
-    },
-    "dnd": $DND
+        "ssid": "$WIFI_NAME"
+    }
 }
 EOF
 )
