@@ -17,7 +17,8 @@ const style = {
   fontFamily: styles.fontFamily,
   fontSize: styles.fontSize,
   lineHeight: styles.lineHeight,
-  fontWeight: styles.fontWeight
+  fontWeight: styles.fontWeight,
+  '--ggs': styles.iconSize
 };
 
 // export const refreshFrequency = 10000; // default
