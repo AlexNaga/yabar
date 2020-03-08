@@ -2,29 +2,35 @@ import Battery from './lib/Battery.jsx';
 import Cpu from './lib/Cpu.jsx';
 import DateTime from './lib/DateTime.jsx';
 import Wifi from './lib/Wifi.jsx';
+import Icons from './lib/Icons.jsx';
 import styles from './lib/styles.jsx';
 
 const renderClass = `
   .status-container {
-    display: flex;
-    padding: 0 22px;
-    position: fixed;
-    top: 8px;
-    right: 0px;
-    color: ${styles.colors.dim};
-    font-family: ${styles.fontFamily};
-    font-size: ${styles.fontSize};
-    line-height: ${styles.lineHeight};
-    font-weight: ${styles.fontWeight};
-    --ggs: ${styles.iconSize};
+      display: flex;
+      padding: 0 22px;
+      position: fixed;
+      top: 8px;
+      right: 0px;
+      color: ${styles.colors.dim};
+      font-family: ${styles.fontFamily};
+      font-size: ${styles.fontSize};
+      line-height: ${styles.lineHeight};
+      font-weight: ${styles.fontWeight};
+      --ggs: ${styles.iconSize};
 
-    div:not(:last-child) {
-      margin-right: 20px;
-    }
+      div {
+          align-items: center;
+          display: flex;
+      }
 
-    i {
-      margin-right: ${styles.iconSpacing};
-    }
+      div:not(:last-child) {
+          margin-right: 20px;
+      }
+
+      i {
+          margin-right: ${styles.iconSpacing};
+      }
   }
 `;
 
@@ -39,6 +45,7 @@ const render = ({ output }) => {
 
   return (
     <div className="status-container">
+      <Icons />
       <Cpu output={data.cpu} />
       <Wifi output={data.wifi} />
       <Battery output={data.battery} />
