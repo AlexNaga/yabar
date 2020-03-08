@@ -1,15 +1,35 @@
 import styles from './styles.jsx';
 
 const render = ({ output }) => {
-  let charging = output.charging;
-  let percentage = output.percentage;
-  let remaining = output.remaining;
+  if (!output) return;
+  const percentage = output.percentage;
+  const isCharging = output.charging;
+  const remainingTime = output.remaining;
+
+  const isFullBattery = percentage > 90 && !isCharging;
+  const isLowBattery = percentage < 10 && !isCharging;
+  const isWarning = isLowBattery ? { color: styles.colors.red } : null;
+
+  const batteryIcon = <i className="gg-battery" />;
+  const fullBatteryIcon = <i className="gg-battery-full" />;
+  const lowBatteryIcon = <i className="gg-battery-empty" />;
+  const chargingIcon = <i className="gg-bolt" />;
+  let icon = batteryIcon;
+
+  if (isCharging) {
+    icon = chargingIcon;
+  } else if (isFullBattery) {
+    icon = fullBatteryIcon;
+  } else if (isLowBattery) {
+    icon = lowBatteryIcon;
+  }
 
   return (
     <div>
-      <div style={percentage < 10 && charging == false ? { color: styles.colors.red } : null}>
+      <div style={isWarning}>
         <span>
-          {charging ? <i class="fas fa-bolt"></i> : null} {percentage}%
+          {icon}
+          {percentage}%
         </span>
       </div>
     </div>
