@@ -14,6 +14,6 @@ const renderClass = `
   transform: translate(-50%);
 `;
 
-const render = ({ output }) => <div>{`${output}`}</div>;
+const render = ({ output }) => <div>{output}</div>;
 
 export { command, refreshFrequency, renderClass as className, render };

@@ -9,6 +9,6 @@ const renderClass = `
   bottom: auto;
 `;
 
-const render = ({ output }) => <div>{`${output}`}</div>;
+const render = ({ output }) => <div>{output}</div>;
 
 export { command, refreshFrequency, renderClass as className, render };
