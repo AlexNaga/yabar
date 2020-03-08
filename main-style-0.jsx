@@ -43,7 +43,6 @@ const refreshFrequency = 1000; // during testing
 const command = 'bash yabar/lib/scripts/get_status.sh';
 
 const render = ({ output }) => {
-  console.log(output);
 
   if (!output) return;
   const data = JSON.parse(output);
