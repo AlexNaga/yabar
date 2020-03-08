@@ -4,7 +4,7 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 
 ## Features
 
-- Shopw active workspace number _(with multi display support)_
+- Show active workspace number _(with multi-display support)
 - Battery indicator
 - Connected WiFi name
 - System load
@@ -25,23 +25,16 @@ $ git clone git@github.com:AlexNaga/yabar.git $HOME/Library/Application\ Support
 
 ## Dependencies
 
-- [jq](https://github.com/stedolan/jq) — used for parsing json output and displaying the workspaces widget
+- [jq](https://github.com/stedolan/jq) — used for parsing JSON output and displaying the workspaces widget
   - install with homebrew: `brew install jq`
 - [SF Mono Fonts](https://developer.apple.com/fonts/) (optional)
 
-# Setup
-
-You will be need spotify oAuth token for [web
-api](https://developer.spotify.com/documentation/web-api/reference/tracks/get-track/).
-You can get one from
-[here](https://developer.spotify.com/console/get-track/?id=3n3Ppam7vgaVa1iaRUc9Lp)
-by clicking **Get Token**. _THIS TOKEN WILL BE EXPIRED QUICK_
-
-```sh
-echo -n "<YOUR_TOKEN_HERE>" > "${HOME}/Library/Application Support/Übersicht/widgets/yabar/lib/scripts/spotify/token.sec"
-```
-
 ## Usage
+
+There are two different widget styles. Enable one of the following widget in Übersicht.
+
+- `yabar-main-style-0-jsx`
+- `yabar-main-style-1-jsx`
 
 ### Refreshing yabai workspaces widget
 
