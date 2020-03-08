@@ -1,5 +1,6 @@
 const render = ({ output }) => {
-  if (typeof output === 'undefined') return null;
+  if (!output) return;
+
   return (
     <div>
       {output.date}

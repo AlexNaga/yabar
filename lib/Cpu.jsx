@@ -1,11 +1,16 @@
 import styles from './styles.jsx';
 
 const render = ({ output }) => {
-  if (typeof output === 'undefined') return null;
+  if (!output) return;
+
+  const cpuLimit = 3;
+  const isHighLoad = output.loadAverage > cpuLimit;
+  const isWarning = isHighLoad ? { color: styles.colors.red } : null;
+
   return (
-    <div style={output.loadAverage > 3 ? { color: styles.colors.red } : null}>
+    <div style={isWarning}>
       <span>
-        <i class="fas fa-tachometer-alt"></i> {output.loadAverage}
+        <i className="gg-performance" /> {output.loadAverage}
       </span>
     </div>
   );

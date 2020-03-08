@@ -1,11 +1,21 @@
 const render = ({ output }) => {
-  if (typeof output === 'undefined') return null;
+  if (!output) return;
+
   const status = output.status;
-  const ssid = output.ssid;
-  if (status === 'inactive') return <div>􀙈</div>;
+  const wifiName = output.ssid;
+
+  if (status === 'inactive') {
+    return (
+      <div>
+        <i className="gg-smile-sad" />
+      </div>
+    );
+  }
+
   return (
     <div>
-      <i class="fas fa-wifi"></i> {output.ssid}
+      <i className="gg-data" />
+      {wifiName}
     </div>
   );
 };
