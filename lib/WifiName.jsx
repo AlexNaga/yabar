@@ -2,22 +2,19 @@ const render = ({ output }) => {
   if (!output) return;
 
   const status = output.status;
-  const wifiName = output.ssid;
-  const style = {
-    display: 'flex',
-    alignItems: 'center'
-  };
+  const wifiName = output.name;
 
   if (status === 'inactive') {
     return (
       <div>
         <i className="gg-smile-sad" />
+        No WiFi
       </div>
     );
   }
 
   return (
-    <div style={style}>
+    <div>
       <i className="gg-data" />
       {wifiName}
     </div>

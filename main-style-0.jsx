@@ -2,7 +2,8 @@ import Battery from './lib/Battery.jsx';
 import Cpu from './lib/Cpu.jsx';
 import Date from './lib/Date.jsx';
 import Time from './lib/Time.jsx';
-import Wifi from './lib/Wifi.jsx';
+import WifiName from './lib/WifiName.jsx';
+import WifiStrength from './lib/WifiStrength.jsx';
 import Divider from './lib/Divider.jsx';
 import Icons from './lib/Icons.jsx';
 import styles from './lib/styles.jsx';
@@ -22,8 +23,8 @@ const renderClass = `
       --ggs: ${styles.iconSize};
 
       div {
-          align-items: center;
           display: flex;
+          align-items: center;
       }
 
       div:not(:last-child) {
@@ -42,6 +43,8 @@ const refreshFrequency = 1000; // during testing
 const command = 'bash yabar/lib/scripts/get_status.sh';
 
 const render = ({ output }) => {
+  console.log(output);
+
   if (!output) return;
   const data = JSON.parse(output);
 
@@ -49,7 +52,8 @@ const render = ({ output }) => {
     <div className="status-container">
       <Icons />
       <Cpu output={data.cpu} />
-      <Wifi output={data.wifi} />
+      <WifiName output={data.wifi} />
+      <WifiStrength output={data.wifi} />
       <Battery output={data.battery} />
 
       <Divider />
