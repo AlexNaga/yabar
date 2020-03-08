@@ -4,11 +4,12 @@ A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersich
 
 ## Features
 
-- Active workspace number
+- Shopw active workspace number _(with multi display support)_
 - Battery indicator
 - Connected WiFi name
+- System load
 - Volume
-- Date
+- Date and time
 
 ## Screenshot
 
@@ -26,7 +27,7 @@ $ git clone git@github.com:AlexNaga/yabar.git $HOME/Library/Application\ Support
 
 - [jq](https://github.com/stedolan/jq) — used for parsing json output and displaying the workspaces widget
   - install with homebrew: `brew install jq`
-- [SF Mono Fonts](https://developer.apple.com/fonts/) (optional) — used for symbols in the statusbar widget
+- [SF Mono Fonts](https://developer.apple.com/fonts/) (optional)
 
 # Setup
 
