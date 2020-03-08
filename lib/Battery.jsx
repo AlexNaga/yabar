@@ -8,7 +8,6 @@ const render = ({ output }) => {
 
   const isFullBattery = percentage > 90 && !isCharging;
   const isLowBattery = percentage < 10 && !isCharging;
-  const isWarning = isLowBattery ? { color: styles.colors.red } : null;
 
   const batteryIcon = <i className="gg-battery" />;
   const fullBatteryIcon = <i className="gg-battery-full" />;
@@ -24,14 +23,17 @@ const render = ({ output }) => {
     icon = lowBatteryIcon;
   }
 
+  const isWarning = isLowBattery ? { color: styles.colors.red } : null;
+  const renderClass = {
+    ...isWarning,
+    display: 'flex',
+    alignItems: 'center'
+  };
+
   return (
-    <div>
-      <div style={isWarning}>
-        <span>
-          {icon}
-          {percentage}%
-        </span>
-      </div>
+    <div style={renderClass}>
+      {icon}
+      {percentage}%
     </div>
   );
 };

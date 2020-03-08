@@ -3,6 +3,10 @@ const render = ({ output }) => {
 
   const status = output.status;
   const wifiName = output.ssid;
+  const style = {
+    display: 'flex',
+    alignItems: 'center'
+  };
 
   if (status === 'inactive') {
     return (
@@ -13,7 +17,7 @@ const render = ({ output }) => {
   }
 
   return (
-    <div>
+    <div style={style}>
       <i className="gg-data" />
       {wifiName}
     </div>

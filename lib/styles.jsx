@@ -10,5 +10,6 @@ export default {
   lineHeight: '24px',
   fontWeight: 500,
   fontFamily: "'SF Mono', monospace",
-  iconSize: '0.8'
+  iconSize: '0.8',
+  iconSpacing: '8px'
 };

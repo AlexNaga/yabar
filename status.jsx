@@ -4,22 +4,29 @@ import DateTime from './lib/DateTime.jsx';
 import Wifi from './lib/Wifi.jsx';
 import styles from './lib/styles.jsx';
 
-const style = {
-  display: 'grid',
-  padding: '0 22px',
-  gridAutoFlow: 'column',
-  gridGap: '20px',
-  position: 'fixed',
-  overflow: 'hidden',
-  right: '0px',
-  top: '0px',
-  color: styles.colors.dim,
-  fontFamily: styles.fontFamily,
-  fontSize: styles.fontSize,
-  lineHeight: styles.lineHeight,
-  fontWeight: styles.fontWeight,
-  '--ggs': styles.iconSize
-};
+const renderClass = `
+  .status-container {
+    display: flex;
+    padding: 0 22px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    color: ${styles.colors.dim};
+    font-family: ${styles.fontFamily};
+    font-size: ${styles.fontSize};
+    line-height: ${styles.lineHeight};
+    font-weight: ${styles.fontWeight};
+    --ggs: ${styles.iconSize};
+
+    div:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    i {
+      margin-right: ${styles.iconSpacing};
+    }
+  }
+`;
 
 // export const refreshFrequency = 10000; // default
 const refreshFrequency = 1000; // during testing
@@ -31,7 +38,7 @@ const render = ({ output }) => {
   const data = JSON.parse(output);
 
   return (
-    <div style={style}>
+    <div className="status-container">
       <Cpu output={data.cpu} />
       <Wifi output={data.wifi} />
       <Battery output={data.battery} />
@@ -40,4 +47,4 @@ const render = ({ output }) => {
   );
 };
 
-export { command, refreshFrequency, render };
+export { command, refreshFrequency, renderClass as className, render };
