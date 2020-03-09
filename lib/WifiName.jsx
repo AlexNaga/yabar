@@ -2,23 +2,27 @@ const render = ({ output }) => {
   if (!output) return;
 
   const status = output.status;
+  const percentage = output.percentage;
   const wifiName = output.name;
 
-  if (status === 'inactive') {
-    return (
-      <div>
-        <i className="far fa-wifi-slash" />
-        No WiFi
-      </div>
-    );
-  }
+  const noWifi = status === 'inactive';
+  const isGoodWiFi = percentage > 75;
+  const isBadWiFi = percentage < 10;
 
-  // TODO: There are even more wifi icons states on FA
+  let iconClassName = 'far fa-wifi-2'; // Default medium WiFi strength
+
+  if (noWifi) {
+    iconClassName = 'far fa-wifi-slash';
+  } else if (isGoodWiFi) {
+    iconClassName = 'fas fa-wifi';
+  } else if (isBadWiFi) {
+    iconClassName = 'far fa-wifi-1';
+  }
 
   return (
     <div>
-      <i className="fas fa-wifi" />
-      {wifiName}
+      <i className={iconClassName} />
+      {noWifi ? 'No WiFi' : wifiName}
     </div>
   );
 };
