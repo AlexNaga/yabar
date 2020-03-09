@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import styles from "./lib/styles.jsx";
+=======
+import { defaultTheme } from './lib/styles/style';
+import styles from './lib/styles/styles.jsx';
+>>>>>>> b94d76500239a8cd9c24a38cc0ab35706f74c92a
 
 const command = "bash yabar/lib/scripts/get_displays_and_spaces.sh";
 
@@ -62,11 +67,13 @@ const generateSpaceList = (displays, spaces) => {
     return (
       <ul key={i} className="space-container">
         {spaces.map((space, i) => {
-          return (
-            <li key={i} className={getClassName(space)}>
-              {space.index}
-            </li>
-          );
+          if (display.index === space.display) {
+            return (
+              <li key={i} className={getClassName(space)}>
+                {space.index}
+              </li>
+            );
+          }
         })}
       </ul>
     );

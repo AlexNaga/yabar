@@ -1,4 +1,4 @@
-import styles from './styles.jsx';
+import styles from './styles/styles.jsx';
 
 const render = ({ output }) => {
   if (!output) return;
@@ -9,10 +9,11 @@ const render = ({ output }) => {
   const isFullBattery = percentage > 90 && !isCharging;
   const isLowBattery = percentage < 10 && !isCharging;
 
-  const batteryIcon = <i className="gg-battery" />;
-  const fullBatteryIcon = <i className="gg-battery-full" />;
-  const lowBatteryIcon = <i className="gg-battery-empty" />;
-  const chargingIcon = <i className="gg-bolt" />;
+  // TODO: There are even more battery icons states on FA
+  const batteryIcon = <i className="far fa-battery-half" />;
+  const fullBatteryIcon = <i className="far fa-battery-full" />;
+  const lowBatteryIcon = <i className="far fa-battery-empty" />;
+  const chargingIcon = <i className="far fa-battery-bolt" />;
   let icon = batteryIcon;
 
   if (isCharging) {

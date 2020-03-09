@@ -7,15 +7,17 @@ const render = ({ output }) => {
   if (status === 'inactive') {
     return (
       <div>
-        <i className="gg-smile-sad" />
+        <i className="far fa-wifi-slash" />
         No WiFi
       </div>
     );
   }
 
+  // TODO: There are even more wifi icons states on FA
+
   return (
     <div>
-      <i className="gg-data" />
+      <i className="fas fa-wifi" />
       {wifiName}
     </div>
   );

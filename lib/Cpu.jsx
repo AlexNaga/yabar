@@ -1,4 +1,4 @@
-import styles from './styles.jsx';
+import styles from './styles/styles.jsx';
 
 const render = ({ output }) => {
   if (!output) return;
@@ -8,9 +8,11 @@ const render = ({ output }) => {
 
   const hasWarning = isHighLoad ? { color: styles.colors.red } : null;
 
+  // TODO: There are even more cpu icons states on FA
+
   return (
     <div style={hasWarning}>
-      <i className="gg-performance" />
+      <i className="far fa-tachometer-fast" />
       {output.loadAverage}
     </div>
   );

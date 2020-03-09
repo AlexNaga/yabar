@@ -6,7 +6,7 @@ import WifiName from './lib/WifiName.jsx';
 import WifiStrength from './lib/WifiStrength.jsx';
 import Divider from './lib/Divider.jsx';
 import Icons from './lib/Icons.jsx';
-import styles from './lib/styles.jsx';
+import styles from './lib/styles/styles.jsx';
 
 const renderClass = `
   .status-container {
@@ -20,7 +20,6 @@ const renderClass = `
       font-size: ${styles.fontSize};
       line-height: ${styles.lineHeight};
       font-weight: ${styles.fontWeight};
-      --ggs: ${styles.iconSize};
 
       div {
           display: flex;
@@ -43,7 +42,6 @@ const refreshFrequency = 1000; // during testing
 const command = 'bash yabar/lib/scripts/get_status.sh';
 
 const render = ({ output }) => {
-
   if (!output) return;
   const data = JSON.parse(output);
 
