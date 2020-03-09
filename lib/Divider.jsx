@@ -1,7 +1,4 @@
-const style = {
-  marginRight: '10px',
-  marginLeft: '-5px'
-};
+const style = {};
 
 const render = () => <div style={style}>|</div>;
 

@@ -29,8 +29,8 @@ const renderClass = `
   }
 
   ul:not(:first-of-type) {
-    margin-left: 20px;
-    padding-left: 8px;
+    margin-left: 12px;
+    padding-left: 12px;
     border-left: 1px solid #D8DEE9;
   }
 
@@ -40,11 +40,13 @@ const renderClass = `
   }
 
   li.visible {
-    border: 2px solid ${styles.colors.dim};
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid ${styles.colors.dim};
   }
 
   li.focused {
     border: 2px solid ${styles.colors.lightgray};
+    border-radius: 2px;
   }
 `;
 
