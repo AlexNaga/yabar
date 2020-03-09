@@ -1,4 +1,4 @@
-import rssiQuality from 'plott-rssi-quality';
+import rssiParser from './WifiQuality.jsx';
 
 const render = ({ output }) => {
   if (!output) return;
@@ -7,7 +7,7 @@ const render = ({ output }) => {
   const rssi = parseInt(output.rssi);
   const wifiName = output.name;
 
-  const wifiQualityInPercentage = rssiQuality(rssi) * 100;
+  const wifiQualityInPercentage = rssiParser(rssi) * 100;
 
   const noWifi = status === 'inactive';
   const isGoodWiFi = wifiQualityInPercentage > 75;
