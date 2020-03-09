@@ -1,14 +1,19 @@
-import { defaultTheme } from './lib/style';
-import styles from './lib/styles.jsx';
+import styles from "./lib/styles.jsx";
 
-const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
+const command = "bash yabar/lib/scripts/get_displays_and_spaces.sh";
 
 const refreshFrequency = false;
 
 const renderClass = `
-  ${defaultTheme}
+  font-family: ${styles.fontFamily};
+  font-size: ${styles.fontSize};
+  background-color: #27313E;
+  line-height: 20px;
+  color: #FFF;
   right: auto;
   bottom: auto;
+  top: 8px;
+  left: 25px;
   font-weight: bold;
 
   .display-container {
@@ -44,10 +49,10 @@ const renderClass = `
 `;
 
 const getClassName = space => {
-  let className = '';
+  let className = "";
 
-  if (space.visible) className += ' visible';
-  if (space.focused) className += ' focused';
+  if (space.visible) className += " visible";
+  if (space.focused) className += " focused";
 
   return className;
 };
