@@ -7,7 +7,7 @@ const render = ({ output }) => {
 
   const noWifi = status === 'inactive';
   const isGoodWiFi = percentage > 75;
-  const isBadWiFi = percentage < 10;
+  const isBadWiFi = percentage < 20;
 
   let iconClassName = 'far fa-wifi-2'; // Default medium WiFi strength
 
