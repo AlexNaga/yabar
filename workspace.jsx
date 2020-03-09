@@ -1,6 +1,6 @@
-import styles from "./lib/styles.jsx";
+import styles from './lib/styles/styles.jsx';
 
-const command = "bash yabar/lib/scripts/get_displays_and_spaces.sh";
+const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
 
 const refreshFrequency = false;
 
@@ -49,10 +49,10 @@ const renderClass = `
 `;
 
 const getClassName = space => {
-  let className = "";
+  let className = '';
 
-  if (space.visible) className += " visible";
-  if (space.focused) className += " focused";
+  if (space.visible) className += ' visible';
+  if (space.focused) className += ' focused';
 
   return className;
 };
