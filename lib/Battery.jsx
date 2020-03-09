@@ -12,7 +12,7 @@ const render = ({ output }) => {
   const batteryIcon = <i className="gg-battery" />;
   const fullBatteryIcon = <i className="gg-battery-full" />;
   const lowBatteryIcon = <i className="gg-battery-empty" />;
-  const chargingIcon = <i className="gg-bolt" />;
+  const chargingIcon = <i className="far fa-battery-bolt" />;
   let icon = batteryIcon;
 
   if (isCharging) {
