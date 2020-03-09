@@ -1,6 +1,6 @@
-import styles from "./lib/styles/styles.jsx";
+import styles from './lib/styles/styles.jsx';
 
-const command = "bash yabar/lib/scripts/get_displays_and_spaces.sh";
+const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
 
 const refreshFrequency = false;
 
@@ -49,10 +49,10 @@ const renderClass = `
 `;
 
 const getClassName = space => {
-  let className = "";
+  let className = '';
 
-  if (space.visible) className += " visible";
-  if (space.focused) className += " focused";
+  if (space.visible) className += ' visible';
+  if (space.focused) className += ' focused';
 
   return className;
 };
@@ -75,10 +75,21 @@ const generateSpaceList = (displays, spaces) => {
   });
 };
 
+const parseJson = json => {
+  try {
+    return JSON.parse(json);
+  } catch (error) {
+    return;
+  }
+};
+
 const render = ({ output }) => {
   if (!output) return;
 
-  const { displays, spaces } = JSON.parse(output);
+  const data = parseJson(output);
+  if (!data) return;
+
+  const { displays, spaces } = data;
   const spaceList = generateSpaceList(displays, spaces);
 
   return <div className="display-container">{spaceList}</div>;
