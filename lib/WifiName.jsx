@@ -7,7 +7,7 @@ const render = ({ output }) => {
   if (status === 'inactive') {
     return (
       <div>
-        <i className="gg-smile-sad" />
+        <i className="far fa-wifi-slash" />
         No WiFi
       </div>
     );
@@ -15,7 +15,7 @@ const render = ({ output }) => {
 
   return (
     <div>
-      <i className="gg-data" />
+      <i className="fas fa-wifi" />
       {wifiName}
     </div>
   );

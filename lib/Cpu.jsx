@@ -10,7 +10,7 @@ const render = ({ output }) => {
 
   return (
     <div style={hasWarning}>
-      <i className="gg-performance" />
+      <i className="far fa-tachometer-fast" />
       {output.loadAverage}
     </div>
   );

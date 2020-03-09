@@ -20,7 +20,6 @@ const renderClass = `
       font-size: ${styles.fontSize};
       line-height: ${styles.lineHeight};
       font-weight: ${styles.fontWeight};
-      --ggs: ${styles.iconSize};
 
       div {
           display: flex;

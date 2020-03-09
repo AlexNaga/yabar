@@ -9,9 +9,9 @@ const render = ({ output }) => {
   const isFullBattery = percentage > 90 && !isCharging;
   const isLowBattery = percentage < 10 && !isCharging;
 
-  const batteryIcon = <i className="gg-battery" />;
-  const fullBatteryIcon = <i className="gg-battery-full" />;
-  const lowBatteryIcon = <i className="gg-battery-empty" />;
+  const batteryIcon = <i className="far fa-battery-half" />;
+  const fullBatteryIcon = <i className="far fa-battery-full" />;
+  const lowBatteryIcon = <i className="far fa-battery-empty" />;
   const chargingIcon = <i className="far fa-battery-bolt" />;
   let icon = batteryIcon;
 
