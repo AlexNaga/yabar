@@ -72,6 +72,9 @@ const render = ({ output }) => {
   if (!output) return;
 
   const { displays, spaces } = JSON.parse(output);
+
+  console.log({ displays, spaces });
+
   const spaceList = generateSpaceList(displays, spaces);
 
   return <div className="display-container">{spaceList}</div>;
