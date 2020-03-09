@@ -9,6 +9,7 @@ const render = ({ output }) => {
   const isFullBattery = percentage > 90 && !isCharging;
   const isLowBattery = percentage < 10 && !isCharging;
 
+  // TODO: There are even more battery icons states on FA
   const batteryIcon = <i className="far fa-battery-half" />;
   const fullBatteryIcon = <i className="far fa-battery-full" />;
   const lowBatteryIcon = <i className="far fa-battery-empty" />;

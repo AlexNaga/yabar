@@ -13,6 +13,8 @@ const render = ({ output }) => {
     );
   }
 
+  // TODO: There are even more wifi icons states on FA
+
   return (
     <div>
       <i className="fas fa-wifi" />

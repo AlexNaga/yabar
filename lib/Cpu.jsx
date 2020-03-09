@@ -8,6 +8,8 @@ const render = ({ output }) => {
 
   const hasWarning = isHighLoad ? { color: styles.colors.red } : null;
 
+  // TODO: There are even more cpu icons states on FA
+
   return (
     <div style={hasWarning}>
       <i className="far fa-tachometer-fast" />
