@@ -3,7 +3,6 @@ import Cpu from './lib/Cpu.jsx';
 import Date from './lib/Date.jsx';
 import Time from './lib/Time.jsx';
 import WifiName from './lib/WifiName.jsx';
-import WifiStrength from './lib/WifiStrength.jsx';
 import Divider from './lib/Divider.jsx';
 import Icons from './lib/Icons.jsx';
 import styles from './lib/styles/styles.jsx';
@@ -50,7 +49,6 @@ const render = ({ output }) => {
       <Icons />
       <Cpu output={data.cpu} />
       <WifiName output={data.wifi} />
-      <WifiStrength output={data.wifi} />
       <Battery output={data.battery} />
 
       <Divider />
