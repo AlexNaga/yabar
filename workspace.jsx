@@ -1,5 +1,5 @@
-import { defaultTheme } from './lib/style';
-import styles from './lib/styles.jsx';
+import { defaultTheme } from './lib/styles/style';
+import styles from './lib/styles/styles.jsx';
 
 const command = 'bash yabar/lib/scripts/get_displays_and_spaces.sh';
 
