@@ -57,11 +57,13 @@ const generateSpaceList = (displays, spaces) => {
     return (
       <ul key={i} className="space-container">
         {spaces.map((space, i) => {
-          return (
-            <li key={i} className={getClassName(space)}>
-              {space.index}
-            </li>
-          );
+          if (display.index === space.display) {
+            return (
+              <li key={i} className={getClassName(space)}>
+                {space.index}
+              </li>
+            );
+          }
         })}
       </ul>
     );
@@ -72,9 +74,6 @@ const render = ({ output }) => {
   if (!output) return;
 
   const { displays, spaces } = JSON.parse(output);
-
-  console.log({ displays, spaces });
-
   const spaceList = generateSpaceList(displays, spaces);
 
   return <div className="display-container">{spaceList}</div>;
