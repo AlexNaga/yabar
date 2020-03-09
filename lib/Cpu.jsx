@@ -1,4 +1,4 @@
-import styles from './styles.jsx';
+import styles from './styles/styles.jsx';
 
 const render = ({ output }) => {
   if (!output) return;

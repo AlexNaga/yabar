@@ -1,4 +1,4 @@
-import { defaultTheme } from './lib/style';
+import { defaultTheme } from './lib/styles/style';
 
 const command = 'date +"%H:%M"';
 const refreshFrequency = 60000; // ms
