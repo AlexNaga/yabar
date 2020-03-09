@@ -47,4 +47,6 @@ yabai -m signal --add event=space_changed \
     action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-workspace-jsx\"'"
 yabai -m signal --add event=display_changed \
     action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-workspace-jsx\"'"
+yabai -m signal --add event=application_front_switched \
+    action="osascript -e 'tell application \"Übersicht\" to refresh widget id \"yabar-workspace-jsx\"'"
 ```
