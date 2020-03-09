@@ -37,8 +37,8 @@ $ git clone git@github.com:AlexNaga/yabar.git $HOME/Library/Application\ Support
 
 There are two different widget styles. Enable one of the following widget in Übersicht.
 
-- `yabar-main-style-0-jsx`
-- `yabar-main-style-1-jsx`
+- `yabar-main-0-jsx`
+- `yabar-main-1-jsx`
 
 ### Refreshing yabai workspaces widget
 
