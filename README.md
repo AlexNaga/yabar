@@ -29,8 +29,6 @@ $ git clone git@github.com:AlexNaga/yabar.git $HOME/Library/Application\ Support
 
 ## Dependencies
 
-- [jq](https://github.com/stedolan/jq) — used for parsing JSON output and displaying the workspaces widget
-  - install with homebrew: `brew install jq`
 - [SF Mono Fonts](https://developer.apple.com/fonts/) (optional)
 
 ## Usage
