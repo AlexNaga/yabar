@@ -85,26 +85,15 @@ const parseJson = json => {
   }
 };
 
-export const updateState = (event, previousState) => {
-  if (event.error) return previousState;
-
-  switch (event.type) {
-    case 'RENDER_PREVIOUS_STATE':
-      return previousState;
-    case 'UB/COMMAND_RAN':
-      return event;
-    default: {
-      return previousState;
-    }
-  }
-};
-
-const render = ({ output, error }, dispatch) => {
+const render = ({ output, error }) => {
   if (!output) return;
-  if (error) dispatch({ type: 'RENDER_PREVIOUS_STATE' }); // If error render previous state
 
-  const data = parseJson(output);
-  if (!data) dispatch({ type: 'RENDER_PREVIOUS_STATE' }); // If error render previous state
+  let data = parseJson(output);
+  console.log(data);
+
+  if (error || !data) {
+    return <div className="display-container"></div>;
+  }
 
   const { displays, spaces } = data;
   const spaceList = generateSpaceList(displays, spaces);

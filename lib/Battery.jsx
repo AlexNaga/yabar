@@ -9,7 +9,6 @@ const render = ({ output }) => {
   const isFullBattery = percentage > 90 && !isCharging;
   const isLowBattery = percentage < 10 && !isCharging;
 
-  // TODO: There are even more battery icons states on FA
   let iconClassName = 'far fa-battery-half';
 
   if (isCharging) {
@@ -20,10 +19,10 @@ const render = ({ output }) => {
     iconClassName = 'far fa-battery-empty';
   }
 
-  const hasWarning = isLowBattery ? { color: styles.colors.red } : null;
+  const highLoadWarning = isLowBattery ? { color: styles.colors.red } : null;
 
   return (
-    <div style={hasWarning}>
+    <div style={highLoadWarning}>
       <i className={iconClassName} />
       {percentage}%
     </div>
