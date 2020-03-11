@@ -5,7 +5,7 @@ const cpuLimits = [
   { limit: 2.8, icon: 'far fa-tachometer-fast' },
   { limit: 2.5, icon: 'far fa-tachometer' },
   { limit: 2, icon: 'far fa-tachometer-average' },
-  { limit: 1.8, icon: 'far fa-tachometer-slow' },
+  { limit: 1.7, icon: 'far fa-tachometer-slow' },
   { limit: 1.5, icon: 'far fa-tachometer-slowest' }
 ];
 
