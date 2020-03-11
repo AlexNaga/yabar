@@ -1,4 +1,4 @@
-import rssiParser from './WifiQuality.jsx';
+import rssiParser from './WifiQuality.js';
 
 const render = ({ output }) => {
   if (!output) return;
