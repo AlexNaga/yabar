@@ -2,6 +2,10 @@
 
 A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht).
 
+
+NOTE: I would recommend using this awesome bar instead: https://github.com/Jean-Tinland/simple-bar
+
+
 ## Features
 
 - Show active workspace number _(with multi-display support)_
