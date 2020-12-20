@@ -3,7 +3,7 @@
 A [yabai](https://github.com/koekeishiya/yabai) status bar widget for [Übersicht](https://github.com/felixhageloh/uebersicht).
 
 
-NOTE: I would recommend using this awesome bar instead: https://github.com/Jean-Tinland/simple-bar
+NOTE: I recommend using this awesome bar instead: https://github.com/Jean-Tinland/simple-bar
 
 
 ## Features
